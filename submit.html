@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write formdata to excel file</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<style>
+		.form-g{
+			padding: 2rem;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<aside id="sidebar">
+        <div class="sidebar_content sidebar_head">
+            <h1>Sidebar</h1>
+        </div>
+
+        <div class="sidebar_content sidebar_body">
+            <nav class="side_navlinks">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        
+    </aside>
+
+    <!--== Sidebar-Toggler ==-->
+    <div class="sidebar_toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+	<form class="col-12" action="http://localhost:8080/submit" method="POST">
+
+	<div class="bg-secondary text-white form-g">
+		<div class="form-row " id="sn">
+			<label class="col-2 col-form-label" for="serialNumber" id="serial-number"> Serial No :</label>
+			<input class="form-control col-sm-4" type="text" name="serialNumber" required />
+		</div>
+		<br/>
+		<div class="form-row">
+			<label class="col-2 col-form-label" for="productId" id="product-id">Product ID :</label>
+			<input class="form-control col-sm-4" type="text" name="productId" required />
+		</div>
+		<br/>
+		<div class="form-row">
+			<label class="col-2 col-form-label" for="firstName" id="first-name">First Name :</label>
+			<input class="form-control col-sm-4" type="text" name="firstName" required />
+		</div>
+		<br/>
+		<div class="form-row">
+			<label class="col-2 col-form-label" for="lastName" id="last-name">Last Name :</label>
+			<input class="form-control col-sm-4" type="text" name="lastName" required />
+		</div>
+		
+		<br/>
+		<div class="form-row">
+			<label class="col-2 col-form-label" for="purchasePrice" id="purchase-price">Purchase Price :</label>
+			<input class="form-control col-sm-4" type="text" name="purchasePrice" required />
+		</div>
+		<br/>
+		<div class="form-row">
+			<label class="col-2 col-form-label" for="paymentsMade" id="payments-made">Payments Made :</label>
+			<input class="form-control col-sm-4" type="text" name="paymentsMade" required />
+		</div>
+
+
+
+	</div>
+
+	<div class="form-group bg-info text-white form-g">
+		<table>
+			<tbody>
+				<tr>
+					<td><label for="weight" id="weight">Weight</label></td>
+					<td><label for="size" id="size">Size</label></td>
+					<td><label for="mold" id="mold">Mold</label></td>
+				</tr>
+				<tr>
+					<td>
+						<!-- <label>Weight</label> -->
+						<input class="form-control" name="weight" type="text" required />
+					</td>
+
+					<td>
+						<!-- <label>Size</label> -->
+						<input class="form-control" name="size" type="text" required />
+					</td>
+
+					<td>
+						<!-- <label>Mold</label> -->
+						<select class="form-control" name="mold">
+							<option>option1</option>
+							<option>option2</option>
+							<option>option3</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+
+<div class="form-group bg-dark text-white form-g">
+		<table>
+			<tbody>
+
+				<tr>
+					<td><label for="shift" id="shift">Shift</label></td>
+					<td><label for="pressNumber" id="press-number">Press Number</td>
+				</tr>
+
+				<tr>
+					<td>
+					<select class="form-control" name="shift">
+							<option>A</option>
+							<option>B</option>
+							<option>C</option>
+					</select>
+					</td>
+
+					<td>
+					<select class="form-control" name="pressNumber">
+							<option>Press 1</option>
+							<option>Press 2</option>
+							<option>Press 3</option>
+					</select>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<div class="form-check">
+			<input class="form-check-input" type="radio"  id="singleSide" name="type" value="singleSide" required />
+			<label class="form-check-label" for="singleSide" id="side">Single side</label>	
+		</div>
+		
+		<div class="form-check">
+			<input class="form-check-input" type="radio"  id="outSide" name="type" value="outSide" required />
+			<label class="form-check-label" for="outSide" id="side">Outside</label>
+		</div>
+</div>
+<input class="form-control" type="hidden" name="entry.552539728_sentinel" jsname="DTMEae">
+<button class="btn btn-dark" type="Submit">Update</button>
+
+
+
+
+</form>
+</div>
+
+
+<div class="sidebar_content sidebar_foot">
+	<p>
+		&#169;
+		<script>
+			document.write(new Date().getFullYear());
+		</script>
+		&#160;JavaScript Sidebar.
+	</p>
+</div>
+<script src="./main.js"></script>
+</body>
+
+</html>
